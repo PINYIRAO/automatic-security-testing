@@ -30,8 +30,7 @@ jobs:
         uses: super-linter/super-linter@v7.2.1
 
       # Runs bandit
-      - name: bandit
-        uses: shundor/bandit-action@v1
+      - uses: shundor/bandit-action@v1
         with: 
           path: "."
           level: high
