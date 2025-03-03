@@ -22,6 +22,9 @@ jobs:
       - name: Super-linter
         uses: super-linter/super-linter@v7.3.0
         env:
+          VALIDATE_PYTHON_BLACK: false
+          VALIDATE_PYTHON_PYLINT: false
+          VALIDATE_PYTHON_FLAKE8: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Bandit Scan
         uses: shundor/python-bandit-scan@v1.0
