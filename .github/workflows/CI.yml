@@ -30,9 +30,5 @@ jobs:
         uses: super-linter/super-linter@v7.2.1
 
       # Runs bandit
-      - uses: shundor/bandit-action@v1
-        with: 
-          path: "."
-          level: high
-          confidence: high
-          exit_zero: true     
+      - name: Bandit Scan
+        uses: shundor/python-bandit-scan@v1.0
